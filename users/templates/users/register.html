@@ -1,0 +1,12 @@
+{% extends "index/base.html" %}
+{% block content %}
+<div class="container">
+    <form method="post" action="">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom">Register</legend>
+            {{form}}
+        </fieldset>
+    </form>
+</div>
+{% endblock content %}
