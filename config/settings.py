@@ -136,4 +136,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'index'
-#LOGIN_URL = 'login'
+LOGIN_URL = 'login' #when trying to access profile through the url after adding the decorator, it gives 404 error, so this line fixes it
