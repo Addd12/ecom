@@ -9,7 +9,7 @@
                 <h1>Are you sure you want to delete {{product.title}}?</h1>
             </fieldset>
             <div class="form-group">
-                <a class="btn btn-outline-secondary" href="{% url 'product-detail' product.id %}">Cancel</a>
+                <a class="btn btn-outline-secondary" href="{% url 'product-details' product.id %}">Cancel</a>
                 <button class="btn btn-danger" type="submit">Delete</button>
             </div>
         </form>
