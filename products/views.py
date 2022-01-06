@@ -40,9 +40,15 @@ class ProductUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             return True
         return False
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Product
     success_url = '/' #redirects to home page after the item is deleted
+
+    def test_func(self):
+        product = self.get_object()
+        if self.request.user == product.owner:
+            return True
+        return False
 
 class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product

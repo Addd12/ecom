@@ -1,19 +1,28 @@
 {% extends "index/base.html" %}
 {% block content %}
 
-<div class="container">
-    <h1 style="text-align: center;">{{product.title}} description</h1>
-    <div class="row">
+<div class="container mt-5">
+    <div class="row my-3">
+        <h1 class="title product">{{product.title}}</h1>
         <div class="col-sm-6">
-            <img src="{{ product.image.url }}" style="width: 600px; height: 600px;" alt="product image">
+            <img class="img-fluid" src="{{ product.image.url }}" alt="product image">
         </div>
-        <div class="col-sm-6">
-            <h2>{{ product.title }}</h2>
-            <p class="small">Created by <a href="#">{{ product.owner }}</a></p>
-            <h3>€{{ product.price }}</h3>
-            <p>{{ product.description }}</p>
-            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'product-update' product.id %}">Update</a>
-            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'product-delete' product.id %}">Delete</a>
+        <div class="col-sm-6 information">
+            <div class="actions">
+                <div class="owner">
+                    <p class="small">By <a href="#">{{ product.owner }}</a></p>
+                </div>
+                {% if object.owner == user %}
+                <div class="owner ownerActions">
+                    <a class="btn btn-info" href="{% url 'product-update' product.id %}"><i class="bi bi-pencil-square"></i></a>
+                    <a class="btn btn-danger" href="{% url 'product-delete' product.id %}"><i class="bi bi-trash"></i></a>
+                </div>
+                {% endif %}
+            </div>
+            <div class="details">
+                <p class="description">{{ product.description }}</p>
+                <span class="price">€{{ product.price }}</span>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,60 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+.content-section{
+    margin-top: 5rem;
+}
+.img-fluid{
+    width: 400px;
+    height: 450px;
+}
+.title{
+    display: inline-block;
+    font-size: 26px;
+}
+.title:first-letter{ /*capitalizes the 1st letter of the 1st word*/
+    text-transform: uppercase;
+}
+.price{
+    font-size: 22px;
+    font-weight: lighter;
+    vertical-align: bottom;
+    display: table-cell;
+}
+.product{
+    text-align: center;
+    padding-top: 1rem;
+}
+.actions{
+    padding-top: 1rem;
+    white-space: nowrap;
+}
+.owner{
+    display: inline-block;
+}
+.ownerActions{
+    float: right;
+}
+.information{
+    position: relative;
+}
+.details span{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.description{
+    padding-top: 10px;
+}
+@media screen and (max-width:1000px) {
+    div.details{
+        font-size: 13px;
+    }
+    
+}
