@@ -2,19 +2,61 @@
 {% load static %}
 {% block content %}
 
-<div class="container mt-5">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo 
-    similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo 
-    similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo 
-    similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo 
-    similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
+<div class="container">
+    <div class="section">
+        <h1 class="aboutHeader">Lorem ipsum dolor sit amet</h1>
+        <p class="abtParagraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo
+            similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo
+            similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo
+            similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
+        </p>
+        <div class="row">
+            <div class="col-md-4 infoBox">
+                <h2>Consectetur adipisicing</h2>
+                <p>Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo
+                    similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="col-md-4 infoBox">
+                <h2>Consectetur adipisicing</h2>
+                <p>Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo
+                    similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="col-md-4 infoBox">
+                <h2>Consectetur adipisicing</h2>
+                <p>Suscipit impedit incidunt, officiis sequi, ipsum repellat alias asperiores aliquid illo
+                    similique corporis omnis accusantium adipisci modi eaque. Nisi animi officia dolor!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+        </div>
+        <h1 class="aboutHeader">Contact and address</h1>
+        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10928.864789747098!2d19.814496087540522!3d41.3140227420544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350311d7a2ac6f5%3A0x9aaf291ce98687fe!2sMother%20Teresa%20Square!5e0!3m2!1sen!2sgr!4v1641604080343!5m2!1sen!2sgr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <h1 class="aboutHeader">Let's get in touch</h1>
+        <form>
+            <div class="contactForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Enter your message here!</label>
+                    <textarea name="textBox" id="message" cols="20" rows="10"></textarea>
+                    <button class="btn btn-info" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 {% endblock content %}
