@@ -1,5 +1,6 @@
 {% extends "index/base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="container">
@@ -43,17 +44,22 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <h1 class="aboutHeader">Let's get in touch</h1>
-        <form>
+        <form method="post">
+            {% csrf_token %}
             <div class="contactForm">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter email">
+                <div class="form-group inp">
+                    {{ form.name|as_crispy_field }}
                 </div>
                 <div class="form-group">
-                    <label for="message">Enter your message here!</label>
-                    <textarea name="textBox" id="message" cols="20" rows="10"></textarea>
-                    <button class="btn btn-info" type="submit">Submit</button>
+                    {{ form.email|as_crispy_field }}
                 </div>
+                <div class="form-group">
+                    {{ form.subject|as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ form.message|as_crispy_field }}
+                </div>
+                <button class="btn btn-info" type="submit">Submit</button>
             </div>
         </form>
     </div>
