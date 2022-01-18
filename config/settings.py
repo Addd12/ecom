@@ -27,7 +27,7 @@ SECRET_KEY = config('KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec0m.herokuapp.com']
+ALLOWED_HOSTS = ['ec0m.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
