@@ -7,4 +7,5 @@ from products.views import ProductListView
 urlpatterns = [
     #path('', ProductListView.as_view(), name='index'),
     #path("", index, name="index")
+    path("about/", about, name="about")
 ]

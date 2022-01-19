@@ -4,11 +4,10 @@ body{
 .account-img {
     height: 125px;
     width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
+    margin: 10px;
 }
 .content-section{
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 .img-fluid{
     width: 400px;
@@ -56,5 +55,44 @@ body{
     div.details{
         font-size: 13px;
     }
-    
+}
+.content-section{
+    position: relative;
+}
+.media{
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    padding: 10px;
+}
+.btn{
+    margin: 10px;
+}
+.section{
+    margin-top: 70px;
+}
+.aboutHeader{
+    text-align: center;
+}
+.abtParagraph{
+    text-align: center;
+}
+.infoBox{
+    text-align: center;
+}
+.contactForm{
+    text-align: center;
+}
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }

@@ -145,4 +145,14 @@ LOGIN_URL = 'login' #when trying to access profile through the url after adding 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+ADMIN_EMAIL = ['eneadasulaj.es@gmail.com',]
+CONTACT_EMAIL = 'eneadasulaj@gmail.com'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = config('PASS')
+
 django_heroku.settings(locals())
