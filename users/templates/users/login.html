@@ -1,19 +1,28 @@
 {% extends "index/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container my-5">
-    <form method="post">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom">Login</legend>
-            {{form|crispy}}
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
-            </div>
-            <div class="text-muted">
-                <p class="text-small">Need an account? <a href="{% url 'register' %}">Sign up</a></p>
-            </div>
-        </fieldset>
-    </form>
+<div class="container login">
+    <div class="frame">
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom header">Login</legend>
+                <div class="credentials">
+                    <div class="field">
+                        {{form.username|as_crispy_field}}
+                    </div>
+                    <div class="field">
+                        {{form.password|as_crispy_field}}
+                    </div>
+                </div>
+                <div class="send">
+                    <button class="btn btn-outline-info" type="submit">Login</button>
+                </div>
+                <div class="text-muted">
+                    <p class="text-small">Need an account? <a href="{% url 'register' %}">Sign up</a></p>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </div>
 {% endblock content %}

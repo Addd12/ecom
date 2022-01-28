@@ -96,3 +96,40 @@ body{
     width:100%;
     position:absolute;
 }
+.container.login{
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+.frame{
+    width: 450px;
+    height: 500px;
+    background-image: linear-gradient(225deg, #a31ce4,#321ae5, #1f06b2);
+    background-size: cover;
+    padding-top: 20px;
+    margin: 0 auto;
+    border-radius: 7px;
+    box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.2);
+}
+.header{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 32px;
+}
+.field{
+    width: 70%;
+    margin: 15px auto;
+}
+.credentials{
+    position: relative;
+    padding: 10px;
+}
+.send .btn{
+    display: block;
+    margin: 3px auto;
+    width: 30%;
+}
+.text-muted{
+    text-align: center;
+    font-size: 12px;
+    padding: 7px;
+}

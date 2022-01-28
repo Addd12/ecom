@@ -24,3 +24,9 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image']
+
+class UserLoginForm(forms.Form):
+
+    class Meta:
+        model = User
+        fields = ['username', 'password']
