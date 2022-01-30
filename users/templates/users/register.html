@@ -1,19 +1,31 @@
 {% extends "index/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container">
-    <form method="post">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom">Register</legend>
-            {{form|crispy}}
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign up</button>
-            </div>
-            <div class="text-muted">
-                <p class="text-small">Already have an  account? <a href="{% url 'login' %}">Login</a></p>
-            </div>
-        </fieldset>
-    </form>
+<div class="container auth">
+    <div class="frame">
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom header">Register</legend>
+                <div class="credentials">
+                    {% for field in r_form %}
+                    <div class="field">
+                        {{ field.label_tag }}<br>
+                        {{ field }}
+                        {% for error in field.errors %}
+                        <p class="err">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="send">
+                    <button class="btn btn-outline-info" type="submit">Sign up</button>
+                </div>
+                <div class="text-muted">
+                    <p class="text-small">Already have an  account? <a href="{% url 'login' %}">Login</a></p>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </div>
 {% endblock content %}

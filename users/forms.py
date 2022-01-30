@@ -26,7 +26,6 @@ class ProfileUpdateForm(forms.ModelForm):
         fields = ['image']
 
 class UserLoginForm(forms.Form):
-
     class Meta:
         model = User
         fields = ['username', 'password']

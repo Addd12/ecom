@@ -96,7 +96,7 @@ body{
     width:100%;
     position:absolute;
 }
-.container.login{
+.container.auth{
     padding-top: 50px;
     padding-bottom: 70px;
 }
@@ -116,7 +116,7 @@ body{
     font-size: 32px;
 }
 .field{
-    width: 70%;
+    width: 50%;
     margin: 15px auto;
 }
 .credentials{
@@ -132,4 +132,9 @@ body{
     text-align: center;
     font-size: 12px;
     padding: 7px;
+}
+.err{
+    font-size: 12px;
+    padding-top: 3px;
+    color: rgb(255, 77, 77);
 }
